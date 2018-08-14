@@ -52,14 +52,28 @@ p.list{
     text-align:center;
 	border: solid 1px;
     margin-left: 5px;
+	display: flex;	
+	flex: 1;
+	flex-direction: column;
+	justify-content: space-around;
+	transition: 0.3s;
+
 }
-p.list:hover{
+p.list:not(.box-enlarged):hover{
 	/*border: solid 2px;*/
     box-shadow: 1px 1px gray, -1px -1px gray;
     cursor: pointer;
-    position: relative;
-transition: box-shadow 0.1s;
+    position: flex;
+	transform: scale(1.1);
+	transition: box-shadow 0.1s, transform 0.05s, flex 1s, margin-right, margin-left 0.5s;
+	padding: 14px 16px;
+	z-index: 1;
+	display: flex;
+	flex: 1.5;
+	margin-right: 10px;
+	margin-left: 10px;
 }
+
 
 li a:hover {
     /*background-color: #fff5cc;*/
@@ -79,6 +93,20 @@ transition: text-shadow 0.1s;
 	cursor: pointer;
     text-shadow: 1px 1px lightgray;
 }
+
+.box-enlarged {
+	transform: scale(1.3);
+	transition: all 0.3s;
+	display: flex;
+	flex: 3;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.container {
+	display: flex;
+	width: 50vw;
+	flex-wrap: wrap;}
 </style>
 <body>
 
@@ -89,7 +117,7 @@ transition: text-shadow 0.1s;
 	<div class="navigation center">
     	<ul>
         	<li><a href="/"><b>Homepage</a></li>
-            <li><a href="/project">Project</b></a></li>
+            <li style="cursor:help" title="See github"><a>Project</b></a></li>
         </ul>
     </div>
 
@@ -102,17 +130,24 @@ been to the US and Germany. My ability to focus on something in a short time
 and get knowledge from it is rather fascinating, meaning both in positive and negative sense. Currently I renewed my interest in programming. So here is what I do.
 CSS, Bootstrap, HTML, Javascript, JQuery.
     </div>
-    <p class="list" style="background-color: black; color:white; border-color: brown">HTML5</p>
-    <p class="list">CSS</p>
-    <p class="list">Javascript</p>
-    <p class="list">JQuery</p>
-    <p class="list">Bootstrap</p>
+</div>
+<div class="container">
+    <p class="list btntransform" style="background-color: black; color:white; border-color: brown;border:outset">HTML5</p>
+    <p class="list" style="background-color: #e9e9e9;border:outset">CSS</p>
+    <p class="list" style="border:outset">Javascript</p>
+    <p class="list" style="border:outset">JQuery</p>
+    <p class="list"  style="border-radius:8px;border:outset">Bootstrap</p>
 </div>
 
 <script>
 	$(document).ready(function() {
     	$(".unhide").click(function(){
         	$(".hide").slideToggle();
+            });
+    });
+	$(document).ready(function() {
+    	$(".btntransform").click(function(){
+        	$(".btntransform").toggleClass('box-enlarged');
             });
     });
 </script>
