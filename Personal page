@@ -55,7 +55,8 @@ p.list{
 	display: flex;	
 	flex: 1;
 	flex-direction: column;
-	justify-content: space-around;
+	/*justify-content: space-around;*/
+	//justify-content tu s nicim nepohol - pri flex sa nepouziva
 	transition: 0.3s;
 
 }
@@ -103,7 +104,7 @@ transition: text-shadow 0.1s;
 	margin-left: 10px;
 }
 
-.container {
+.container: n-th-child(1) {
 	display: flex;
 	width: 50vw;
 	flex-wrap: wrap;}
