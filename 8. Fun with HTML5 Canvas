@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>HTML5 Canvas</title>
 </head>
-<body>
+<body style="overflow:hidden">
 		<div><kbd><h1>Hold the mouse button.</h1> Press A for sudden color change and S for constant size.</kbd></div>
 <canvas id="draw" width="800" height="800"></canvas>
 <script>
