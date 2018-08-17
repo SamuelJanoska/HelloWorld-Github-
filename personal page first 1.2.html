@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+html {
+	font-family: "Verdana", serif;
+    color: black;
+    margin: 2vw 10vw;
+}
+
+img{
+	border-radius: 50%;
+    transform: scale(0.8);
+    opacity: 0.9;
+transition: opacity 0.2s, transform 0.2s;
+    }
+    
+img:hover{
+	transform: scale(0.81);
+    opacity: 1;
+    }
+
+ul {
+	list-style-type: none;
+    padding-left: 0%;
+}
+
+li{
+    display: inline-block;
+	/*padding: 14px 16px; -- nepotrebne, zvacsi sa priestor medzi hp a project*/
+    text-decoration: none;
+}
+
+li a{
+    display: inline-block;
+	padding: 14px 16px;
+    /*padding: 0% 30%;*/
+    text-decoration: none;
+    float:left;
+    color: black;
+    text-align: center
+}
+
+p.list{
+    display: inline-block;
+	padding: 14px 16px;
+    /*padding: 0% 30%;*/
+    text-decoration: none;
+    float:left;
+    color: black;
+    text-align:center;
+	border: solid 1px;
+    margin-left: 5px;
+	display: flex;	
+	flex: 1;
+	flex-direction: column;
+	/*justify-content: space-around;*/
+	//justify-content tu s nicim nepohol - pri flex sa nepouziva
+	transition: 0.3s;
+
+}
+p.list:not(.box-enlarged):hover{
+	/*border: solid 2px;*/
+    box-shadow: 1px 1px gray, -1px -1px gray;
+    cursor: pointer;
+    position: flex;
+	transform: scale(1.1);
+	transition: box-shadow 0.1s, transform 0.05s, flex 1s, margin-right, margin-left 0.5s;
+	padding: 14px 16px;
+	z-index: 1;
+	display: flex;
+	flex: 1.5;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+
+li a:hover {
+    /*background-color: #fff5cc;*/
+	text-shadow: 1px 1px lightgray;
+transition: text-shadow 0.1s;
+}
+
+.center {
+	text-align: center;
+}
+
+.hide {
+	display: none;
+}
+
+.unhide:hover{
+	cursor: pointer;
+    text-shadow: 1px 1px lightgray;
+}
+
+.box-enlarged {
+	transform: scale(1.3);
+	transition: all 0.3s;
+	display: flex;
+	flex: 3;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.container: n-th-child(1) {
+	display: flex;
+	width: 50vw;
+	flex-wrap: wrap;}
+</style>
+<body>
+
+
+<div class="header center">
+	<img src="https://media.licdn.com/dms/image/C4E03AQEwdXR0QuthPA/profile-displayphoto-shrink_200_200/0?e=1539216000&v=beta&t=xQtXNX4mhhVYu7cSGr_a8IyhLsbLZOyGDO_LYA1UpCM">
+</div>
+	<div class="navigation center">
+    	<ul>
+        	<li><a href="/"><b>Homepage</a></li>
+            <li style="cursor:help" title="See github"><a>Project</b></a></li>
+        </ul>
+    </div>
+
+<div class="container">
+	<div>
+    	<p class="unhide" style="padding-left: 8px" title="About me"><b>About</b></p>
+    	<p class="hide"style="padding-left: 8px">Greetings, friend! As a student of business informatics major at the University of Economics in Bratislava
+and economic policy minor at Masaryk University in Brno, I have acquired some experience in many various regards. I have interned in IBM, Demagog.SK, KONE, have 
+been to the US and Germany. My ability to focus on something in a short time
+and get knowledge from it is rather fascinating, meaning both in positive and negative sense. Currently I renewed my interest in programming. So here is what I do.
+CSS, Bootstrap, HTML, Javascript, JQuery.
+    </div>
+</div>
+<div class="container">
+    <p class="list btntransform" style="background-color: black; color:white; border-color: brown;border:outset">HTML5</p>
+    <p class="list" style="background-color: #e9e9e9;border:outset">CSS</p>
+    <p class="list" style="border:outset">Javascript</p>
+    <p class="list" style="border:outset">JQuery</p>
+    <p class="list"  style="border-radius:8px;border:outset">Bootstrap</p>
+</div>
+
+<script>
+	$(document).ready(function() {
+    	$(".unhide").click(function(){
+        	$(".hide").slideToggle();
+            });
+    });
+	$(document).ready(function() {
+    	$(".btntransform").click(function(){
+        	$(".btntransform").toggleClass('box-enlarged');
+            });
+    });
+</script>
+
+</body>
+</html>
