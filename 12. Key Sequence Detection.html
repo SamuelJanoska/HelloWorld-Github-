@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+<style>
+
+p {
+	user-select: none;
+	color: white;
+	transition: 1s;}
+
+.trigger {
+	display: show;
+	user-select: auto;
+	color: black;
+	font-size: 32px;
+	animation-name: hover;
+  	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	transition: 1s;
+}
+
+@keyframes hover {
+	0% {
+
+	}
+	50% {
+		margin-top: 60px;
+	}
+}
+</style>
+<script>
+	const pressed=[];
+	const secretcodeInverse='edoceht'
+	let userArr=[]
+
+	window.addEventListener('keyup', e =>
+	{
+		pressed.unshift(e.key);
+		pressed.splice(secretcodeInverse.length);
+		userArr=pressed.join("");
+		if (userArr === secretcodeInverse){
+			let element = document.getElementsByTagName("p");
+			console.log(element[0]);
+			element[0].classList.toggle("trigger");
+			}
+			/*if (document.body.style.backgroundColor="white"){
+				document.body.style.backgroundColor="red";}
+			}
+			else{
+				document.body.style.backgroundColor="white";
+			}*/
+	})
+</script>
+<p class="">
+Congrats, you found the code!
+</p>
+</body>
+</html>
