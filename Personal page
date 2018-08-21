@@ -117,7 +117,7 @@ transition: text-shadow 0.1s;
 </div>
 	<div class="navigation center">
     	<ul>
-        	<li><a href="/"><b>Homepage</a></li>
+        	<li><a href="javascript:void(0)"><b>Homepage</a></li>
             <li style="cursor:help" title="See github"><a>Project</b></a></li>
         </ul>
     </div>
