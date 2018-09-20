@@ -3,10 +3,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
 
+
 html {
 	font-family: "Verdana", serif;
     color: black;
     margin: 2vw 10vw;
+	min-height: 100%;
 }
 
 img{
@@ -51,22 +53,25 @@ p.list{
     color: black;
     text-align:center;
 	border: solid 1px;
+	margin-top: 1px;
     margin-left: 5px;
 	display: flex;	
 	flex: 1;
 	flex-direction: column;
-	/*justify-content: space-around;*/
+	transition: box-shadow 0.3s, transform 0.1s, flex 0.5s, margin-right 0.5s, margin-left 0.5s, background-color .2s;
 	//justify-content tu s nicim nepohol - pri flex sa nepouziva
-	transition: 0.3s;
-
+	/*transition: 0.3s;*/
+	border:outset;
+	background-color: white;
 }
+
 p.list:not(.box-enlarged):hover{
 	/*border: solid 2px;*/
-    box-shadow: 1px 1px gray, -1px -1px gray;
+    box-shadow: 1px 1px gray, -1px -1px lightgray;
     cursor: pointer;
     position: flex;
-	transform: scale(1.1);
-	transition: box-shadow 0.1s, transform 0.05s, flex 1s, margin-right, margin-left 0.5s;
+	transform: scale(1.07);
+	transition: box-shadow 0.3s, transform 0.1s, flex 0.5s, margin-right 0.5s, margin-left 0.5s, background-color .2s;
 	padding: 14px 16px;
 	z-index: 1;
 	display: flex;
@@ -77,9 +82,8 @@ p.list:not(.box-enlarged):hover{
 
 
 li a:hover {
-    /*background-color: #fff5cc;*/
 	text-shadow: 1px 1px lightgray;
-transition: text-shadow 0.1s;
+	transition: text-shadow 0.1s;
 }
 
 .center {
@@ -108,6 +112,14 @@ transition: text-shadow 0.1s;
 	display: flex;
 	width: 50vw;
 	flex-wrap: wrap;}
+
+p.list.bootstrap{
+	background-color:#343a40;
+	color: white !important;}
+
+p.list.bootstrap:hover{
+	background-color: #23272b !important;}
+
 </style>
 <body>
 
@@ -118,7 +130,7 @@ transition: text-shadow 0.1s;
 	<div class="navigation center">
     	<ul>
         	<li><a href="javascript:void(0)"><b>Homepage</a></li>
-            <li style="cursor:help" title="See github"><a>Project</b></a></li>
+            <li style="cursor:pointer" title="See dedicated OneDrive folder" onclick="redirect()"><a>Project</b></a></li>
         </ul>
     </div>
 
@@ -129,7 +141,7 @@ transition: text-shadow 0.1s;
 and economic policy minor at Masaryk University in Brno, I have acquired some experience in many various regards. I have interned in IBM, Demagog.SK, KONE, have 
 been to the US and Germany. My ability to focus on something in a short time
 and get knowledge from it is rather fascinating, meaning both in positive and negative sense. Currently I renewed my interest in programming. So here is what I do.
-CSS, Bootstrap, HTML, Javascript, JQuery.
+CSS, HTML, Javascript, JQuery, Bootstrap, SASS. Also some basic stuff with Vue and npm.
     </div>
 </div>
 <div class="container">
@@ -137,7 +149,12 @@ CSS, Bootstrap, HTML, Javascript, JQuery.
     <p class="list" style="background-color: #e9e9e9;border:outset">CSS</p>
     <p class="list" style="border:outset">Javascript</p>
     <p class="list" style="border:outset">JQuery</p>
-    <p class="list"  style="border-radius:8px;border:outset">Bootstrap</p>
+    <p class="list bootstrap" style="border-radius:10px;border:outset;">Bootstrap</p>
+    <p class="list"  style="border-radius:8px;border:outset">SASS</p>
+    <p class="list"  style="border-radius:8px;border:outset">Github</p>
+    <p class="list bootstrap" style="border-radius:8px;border:outset">-    UX    -</p>
+    <p class="list"  style="background-color: black; color:white;border-radius:8px;border:outset;font-size:13px;">Vue.js</p>
+    <p class="list"  style="border-radius:8px;border:outset;font-size:13px;">npm</p>
 </div>
 
 <script>
@@ -151,6 +168,12 @@ CSS, Bootstrap, HTML, Javascript, JQuery.
         	$(".btntransform").toggleClass('box-enlarged');
             });
     });
+
+	function redirect() {
+	var promp = confirm("Do you really wish to leave the page?")
+		if (promp==true) {
+			window.location.href='https://1drv.ms/f/s!Am0qBdMjItPkgYsF_e1ofE2u7lmTkA';
+		}};
 </script>
 
 </body>
