@@ -1,0 +1,124 @@
+{
+  "boards": [
+    {
+      "name": "myBoard2",
+      "user": 0,
+      "id": 59305256939,
+      "starred": false,
+      "created": "2020-09-07"
+    },
+    {
+      "name": "myBoard1",
+      "user": 0,
+      "id": 36634527825,
+      "starred": false,
+      "created": "2020-09-07"
+    }
+  ],
+  "tasks": [
+    {
+      "boardId": 59305256939,
+      "description": "",
+      "completed": false,
+      "listId": 73585056810,
+      "title": "odpáliť raketu",
+      "id": 66264468842,
+      "created": "2020-09-08",
+      "deadline": "2020-09-11",
+      "order": 0
+    },
+    {
+      "boardId": 59305256939,
+      "description": "",
+      "completed": false,
+      "listId": 73585056810,
+      "title": "pobaliť jedlo",
+      "id": 86525568605,
+      "created": "2020-09-08",
+      "deadline": "2020-09-11",
+      "order": 1
+    },
+    {
+      "boardId": 59305256939,
+      "description": "",
+      "completed": false,
+      "listId": 73585056810,
+      "title": "tlačová správa",
+      "id": 44313732198,
+      "created": "2020-09-08",
+      "deadline": "2020-09-11",
+      "order": 2
+    },
+    {
+      "boardId": 59305256939,
+      "description": "",
+      "completed": false,
+      "listId": 30196495269,
+      "title": "nastaviť odpočítavanie",
+      "id": 32661429979,
+      "created": "2020-09-08",
+      "deadline": "2020-09-11",
+      "order": 1
+    },
+    {
+      "boardId": 59305256939,
+      "description": "",
+      "completed": false,
+      "listId": 73071155134,
+      "title": "natankovať raketu",
+      "id": 7206146200,
+      "created": "2020-09-08",
+      "deadline": "2020-09-11"
+    },
+    {
+      "boardId": 59305256939,
+      "description": "",
+      "completed": false,
+      "listId": 30196495269,
+      "title": "pripraviť astronautov",
+      "id": 7860271133,
+      "created": "2020-09-08",
+      "deadline": "2020-09-11",
+      "order": 0
+    }
+  ],
+  "users": [],
+  "lists": [
+    {
+      "boardId": 36634527825,
+      "title": "list1",
+      "id": 33830515922,
+      "created": "2020-09-07"
+    },
+    {
+      "boardId": 36634527825,
+      "title": "fdsafdsa",
+      "id": 66351715243,
+      "created": "2020-09-07"
+    },
+    {
+      "boardId": 59305256939,
+      "title": "to do",
+      "id": 73585056810,
+      "created": "2020-09-08"
+    },
+    {
+      "boardId": 59305256939,
+      "title": "in progress",
+      "id": 30196495269,
+      "created": "2020-09-08"
+    },
+    {
+      "boardId": 59305256939,
+      "title": "completed",
+      "id": 73071155134,
+      "created": "2020-09-08"
+    },
+    {
+      "boardId": 59305256939,
+      "title": "list4",
+      "id": 89685280207,
+      "created": "2020-09-09"
+    }
+  ]
+}
