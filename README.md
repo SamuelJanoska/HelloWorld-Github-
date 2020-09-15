@@ -1,3 +1,6 @@
+# O tomto README súbore
+Tento README súbor je prevzatý zo stránky lear2code od Filipa Hrica. Testoval som si na ňom transfer a commit cez Git GUI.
+
 # Learn2code: Cypress
 Repozitár ku kurzu Learn2code na tému test automation pomocou Cypress.io
 
